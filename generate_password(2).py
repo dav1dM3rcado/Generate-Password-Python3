@@ -1,18 +1,9 @@
 import random
+import string
 
 def generate_password():
 
-        capital_letter = ['A', 'B', 'C', 'D', 'E', 'F',
-        'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-        'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z']
-        lower_case = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
-        'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't',
-        'u', 'v', 'x', 'y', 'z']
-        numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-        characters = ['*', '+', '-', '/', '@', '_', '?', '!', '[',
-        '{', '(', ')', '}', ']', ',', ';', '.', '>', '<', '~', '°',
-        '^', '&', '$', '#', '"']
-        characters = capital_letter + lower_case + characters + numbers
+        characters = string.ascii_lowercase + string.digits + string.punctuation + string.ascii_uppercase
         password = []
         numbers_of_chartes = int(input("Por favor Digite el tamaño de la contraseña(Maximo 15, minimo 8): "))
         for i in range(numbers_of_chartes):
